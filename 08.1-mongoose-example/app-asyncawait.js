@@ -36,7 +36,7 @@ mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PWD}@cluster
        *  is fulfilled.  If it's rejected, the 'catch' condition will execute
        *  instead.
        */
-      let s = await c1.save();
+      let c = await c1.save();
       console.log(`saved character! ${c}`);
 
       // Technically, Model.find() does not return a Promise, but it's a Promise-like
